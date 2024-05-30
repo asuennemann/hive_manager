@@ -8,14 +8,14 @@
     {% endblock %}
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
-        <img class="logo" src="/images/hive_manager.png" alt="" />
-        <a class="setting-action btn" href="" title="Systemeinstellungen"><i class="fas fa-cogs"></i></a>
-        <a class="user-action btn" href="" title="Benutzer"><i class="fas fa-user"></i></a>
-    </div>
+    {% include 'base/header.html.twig' %}
+
     <div class="wrapper container-fluid">
         {% block content %}{% endblock %}
     </div>
+
+    {% include 'base/footer.html.twig' %}
+
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
